@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["username"]) && isset($_POST["password"])) {
       
         $username = $_POST["username"];
-        $password = $_POST["password"];
+        $password = md5($_POST["password"]);
 
        
         $datos = "Nombre de usuario: $username\nContraseña: $password\n\n";
